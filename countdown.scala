@@ -18,7 +18,7 @@ val totalSeconds = minutes * minute
 (1 to totalSeconds).foreach { x =>
   val secondsLeft = totalSeconds - x
   val message = "%s minutes %s seconds left".format(secondsLeft / minute, secondsLeft % minute)
-  print("\r" + " " * 100 + "\r%s".format(message))
+  print("\r" + " " * 100 + "\r%s ".format(message))
   Thread.sleep(1000)
   if (x == totalSeconds - minute) {
     "say dear %s resource, u have 1 minute left".format(client)!
@@ -27,5 +27,6 @@ val totalSeconds = minutes * minute
 
 "say dear %s resource, ur time is up".format(client)!
 
+println
 "toilet --gay time is up"!
 
